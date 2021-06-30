@@ -1,0 +1,554 @@
+/*
+font-family: 'Poppins', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* #################### GLOBAL STYLE #################### */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* #################### REUSABLE #################### */
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* #################### HEADER #################### */
+
+.navbar {
+  padding: 30px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    a {
+      color: #ffffff;
+      font-size: 35px;
+      font-weight: 500;
+      span {
+        color: #4070F4;
+      }
+    }
+  }
+  .menu {
+    li {
+      list-style: none;
+      display: inline-block;
+      a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+        transition: .6s;
+        &:hover {
+          color: #4070F4;
+        }
+      }
+    }
+  }
+}
+
+/* #################### HOME #################### */
+
+.home {
+  display: flex;
+  background: url("../img/bg3.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #ffffff;
+  min-height: 500px;
+  .max-width {
+    margin: auto 0 auto 40px;
+  }
+  .home-content {
+    .text-1 {
+      font-size: 27px;
+    }
+    .text-2 {
+      font-size: 75px;
+      font-weight: 600;
+      margin-left: -3px;
+    }
+    .text-3 {
+      font-size: 40px;
+      margin: 5px 0;
+      span {
+        color: #4070F4;
+        font-weight: 500;
+      }
+    }
+    a {
+      display: inline-block;
+      background: #4070F4;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 30px;
+      margin-top: 20px;
+      border-radius: 6px;
+      border: 2px solid #4070F4;
+      transition: all .3s ease;
+      &:hover {
+        color: #4070F4;
+        background: none;
+      }
+    }
+  }
+}
+
+/* #################### ABOUT #################### */
+
+.about {
+  .title {
+    &:after {
+      content: "who i am";
+    }
+  }
+}
+
+section {
+  padding: 100px 0;
+  .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: #111;
+      transform: translateX(-50%);
+    }
+    &:after {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      font-size: 20px;
+      color: #4070F4;
+      padding: 5px;
+      background: #ffffff;
+      transform: translateX(-50%);
+    }
+  }
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .column {
+      width: 50%;
+    }
+     .left {
+       width: 45px;
+       img {
+         width: 400px;
+         height: 400px;
+         object-fit: cover;
+         border-radius: 8px;
+       }
+     }
+    .right {
+      width: 55%;
+      .text {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        span {
+          color: #4070F4;
+        }
+      }
+      p {
+        text-align: justify;
+      }
+      a {
+        display: inline-block;
+        background: #4070F4;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 30px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid #4070F4;
+        transition: all .3s ease;
+        &:hover {
+          color: #4070F4;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+/* #################### SERVICES #################### */
+
+.services {
+  background: #111;
+  color: #ffffff;
+  .title {
+    &:before {
+      background: #ffffff;
+    }
+    &:after {
+      background: #111111;
+      content: "what i provide";
+    }
+  }
+  .services-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .card {
+      width: calc(33.3333% - 20px);
+      background: #222;
+      text-align: center;
+      border-radius: 6px;
+      padding: 20px 25px;
+      cursor: pointer;
+      i {
+        font-size: 50px;
+        color: #4070F4;
+      }
+      .text {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+      }
+      .box {
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        background: #4070F4;
+        .box {
+          transform: scale(1.05);
+        }
+        i {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+/* #################### SKILLS #################### */
+
+.skills {
+  .title {
+    &:after {
+      content: "what i know";
+    }
+  }
+  .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .column {
+      width: calc(50% - 30px);
+    }
+    .left {
+      p {
+        text-align: justify;
+      }
+      a {
+        display: inline-block;
+        background: #4070F4;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid #4070F4;
+        transition: all .3s ease;
+        &:hover {
+          color: #4070F4;
+          background: none;
+        }
+      }
+      .text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+    .right {
+      .bars {
+        margin-bottom: 15px;
+      }
+      .info {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .line {
+        position: relative;
+        height: 5px;
+        width: 100%;
+        background: lightgray;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: #4070F4;
+        }
+      }
+      .html {
+        &:before {
+          width: 40%;
+        }
+      }
+      .css {
+        &:before {
+          width: 30%;
+        }
+      }
+      .sass {
+        &:before {
+          width: 10%;
+        }
+      }
+      .js {
+        &:before {
+          width: 1%;
+        }
+      }
+    }
+  }
+}
+
+/* #################### WORKS #################### */
+
+.works {
+  background: #111;
+  color: #ffffff;
+  .title {
+    &:before {
+      background: #ffffff;
+    }
+    &:after {
+      background: #111111;
+      content: "What I've done";
+    }
+  }
+  .carousel {
+    a {
+      color: #FFFFFF;
+    }
+    .card {
+      background: #222222;
+      border-radius: 6px;
+      padding: 25px 35px;
+      text-align: center;
+      transition: all .3s ease;
+      &:hover {
+        background: #4070F4;
+        .box {
+          transform: scale(1.05);
+        }
+        img {
+          border-color: #FFFFFF;
+        }
+      }
+      .text {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease;
+      }
+      img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 5px solid #4070F4;
+        transition: all .3s ease;
+      }
+    }
+  }
+}
+
+/* #################### CONTACT #################### */
+
+.contact {
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .right {
+      form {
+        .button {
+          height: 47px;
+          width: 170px;
+          button {
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #4070F4;
+            background: #4070F4;
+            color: #FFFFFF;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all .3s ease;
+            cursor: pointer;
+            &:hover {
+              color: #4070F4;
+              background: none;
+            }
+          }
+        }
+        .name {
+          margin-right: 10px;
+        }
+        .email {
+          margin-left: 10px;
+        }
+        .fields {
+          display: flex;
+
+          .field {
+            height: 45px;
+            width: 100%;
+            input {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+        .field {
+          height: 45px;
+          width: 100%;
+          margin-bottom: 15px;
+
+          input {
+            height: 100%;
+            width: 100%;
+            border: 1px solid lightgray;
+            border-radius: 6px;
+            outline: none;
+            padding: 0 15px;
+            font-size: 17px;
+          }
+        }
+        .textarea {
+          height: 80px;
+          width: 100%;
+          textarea {
+            height: 100%;
+            width: 100%;
+            border: 1px solid lightgray;
+            border-radius: 6px;
+            outline: none;
+            padding: 0 15px;
+            font-size: 17px;
+            padding-top: 10px;
+            resize: none;
+          }
+        }
+      }
+    }
+    .row {
+      display: flex;
+      height: 65px;
+      align-items: center;
+      .info {
+        margin-left: 30px;
+      }
+      i {
+        font-size: 25px;
+        color: #4070F4;
+      }
+    }
+    .info {
+      .head {
+        font-weight: 500;
+      }
+      .sub-title {
+        color: #333;
+      }
+    }
+    .column {
+      width: calc(50% - 30px);
+    }
+    .text {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .left {
+      .icons {
+        margin: 10px 0;
+      }
+      p {
+        text-align: justify;
+      }
+    }
+  }
+  .title {
+    &:after {
+      content: "get in touch";
+    }
+  }
+}
+
+/* #################### FOOTER #################### */
+
+footer {
+  text-align: center;
+  background: #111111;
+  padding: 20px 23px ;
+  color: #FFFFFF;
+  span {
+    a {
+      color: #4070F4;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
