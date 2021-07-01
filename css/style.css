@@ -34,6 +34,17 @@ a {
   position: fixed;
   width: 100%;
   z-index: 999;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: #4070F4;
+}
+.navbar.sticky .logo a span {
+  color: #FFFFFF;
+}
+.navbar.sticky .menu li a:hover {
+  color: #FFFFFF;
 }
 .navbar .max-width {
   display: flex;
@@ -61,6 +72,12 @@ a {
 }
 .navbar .menu li a:hover {
   color: #4070F4;
+}
+.navbar .menu-btn {
+  color: #FFFFFF;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
 }
 
 /* #################### HOME #################### */

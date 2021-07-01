@@ -40,6 +40,27 @@ a {
   position: fixed;
   width: 100%;
   z-index: 999;
+  transition: all .3s ease;
+  &.sticky {
+    padding: 15px 0;
+    background: #4070F4;
+    .logo {
+      a {
+        span {
+          color: #FFFFFF;
+        }
+      }
+    }
+    .menu {
+      li {
+        a {
+          &:hover {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
   .max-width {
     display: flex;
     align-items: center;
@@ -70,6 +91,12 @@ a {
         }
       }
     }
+  }
+  .menu-btn {
+    color: #FFFFFF;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
   }
 }
 
